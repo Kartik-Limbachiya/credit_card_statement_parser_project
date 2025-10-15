@@ -17,16 +17,17 @@ origins = [
     "http://localhost:3000",  # Allow your local React app
     "http://localhost",
     # Add the URL of your deployed front-end application here
-    # Example: "https://your-frontend-app-name.vercel.app",
+    "https://credit-card-statement-parser-sand.vercel.app", # <-- ADD THIS LINE
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"], # Allows all methods (GET, POST, etc.)
-    allow_headers=["*"], # Allows all headers
+    allow_methods=["*"], 
+    allow_headers=["*"],
 )
+
 
 # Initialize the master parser
 parser = CreditCardStatementParser()
